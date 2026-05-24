@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>st-lukes Secondary School Management System</title>
 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    body{
+      background:#f4f7fc;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar{
+      height:100vh;
+      background:#0d6efd;
+      color:white;
+      position:fixed;
+      width:250px;
+      padding-top:20px;
+    }
+
+    .sidebar h2{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .sidebar a{
+      color:white;
+      text-decoration:none;
+      display:block;
+      padding:15px 20px;
+      transition:0.3s;
+    }
+
+    .sidebar a:hover{
+      background:white;
+      color:#0d6efd;
+    }
+
+    .main-content{
+      margin-left:260px;
+      padding:20px;
+    }
+
+    .card-box{
+      border:none;
+      border-radius:15px;
+      color:white;
+      padding:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .students{
+      background:#198754;
+    }
+
+    .teachers{
+      background:#0d6efd;
+    }
+
+    .fees{
+      background:#dc3545;
+    }
+
+    .table-section{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.05);
+      margin-top:20px;
+    }
+
+    .navbar{
+      background:white;
+      border-radius:15px;
+      margin-bottom:20px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    footer{
+      text-align:center;
+      margin-top:30px;
+      color:gray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2><i class="fa-solid fa-school"></i> EduTrack</h2>
+
+    <a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+    <a href="#"><i class="fa-solid fa-user-graduate"></i> Students</a>
+    <a href="#"><i class="fa-solid fa-chalkboard-user"></i> Teachers</a>
+    <a href="#"><i class="fa-solid fa-money-bill-wave"></i> Fees</a>
+    <a href="#"><i class="fa-solid fa-calendar"></i> Timetable</a>
+    <a href="#"><i class="fa-solid fa-book"></i> Subjects</a>
+    <a href="#"><i class="fa-solid fa-file-lines"></i> Reports</a>
+    <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Navbar -->
+    <nav class="navbar p-3">
+      <div class="container-fluid">
+        <h4>Secondary School Management System</h4>
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-user"></i> Admin
+        </button>
+      </div>
+    </nav>
+
+    <!-- Dashboard Cards -->
+    <div class="row">
+
+      <div class="col-md-4 mb-3">
+        <div class="card-box students">
+          <h3>1,250</h3>
+          <p>Total Students</p>
+          <i class="fa-solid fa-user-graduate fa-2x"></i>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card-box teachers">
+          <h3>75</h3>
+          <p>Total Teachers</p>
+          <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card-box fees">
+          <h3>Ksh 2.4M</h3>
+          <p>Fees Collected</p>
+          <i class="fa-solid fa-money-bill-wave fa-2x"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Students Table -->
+    <div class="table-section">
+      <h4><i class="fa-solid fa-user-graduate"></i> Student Management</h4>
+
+      <table class="table table-striped mt-3">
+        <thead class="table-primary">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Attendance</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>ST001</td>
+            <td>John Mwangi</td>
+            <td>Form 3</td>
+            <td>95%</td>
+            <td><span class="badge bg-success">Active</span></td>
+          </tr>
+
+          <tr>
+            <td>ST002</td>
+            <td>Aisha Ali</td>
+            <td>Form 2</td>
+            <td>89%</td>
+            <td><span class="badge bg-success">Active</span></td>
+          </tr>
+
+          <tr>
+            <td>ST003</td>
+            <td>Brian Otieno</td>
+            <td>Form 4</td>
+            <td>76%</td>
+            <td><span class="badge bg-warning">Warning</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Teachers Table -->
+    <div class="table-section">
+      <h4><i class="fa-solid fa-chalkboard-user"></i> Teacher Management</h4>
+
+      <table class="table table-striped mt-3">
+        <thead class="table-info">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Phone</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>TR001</td>
+            <td>Mr. Kamau</td>
+            <td>Mathematics</td>
+            <td>0712345678</td>
+            <td><span class="badge bg-success">Active</span></td>
+          </tr>
+
+          <tr>
+            <td>TR002</td>
+            <td>Mrs. Fatuma</td>
+            <td>English</td>
+            <td>0723456789</td>
+            <td><span class="badge bg-success">Active</span></td>
+          </tr>
+
+          <tr>
+            <td>TR003</td>
+            <td>Mr. Odhiambo</td>
+            <td>Physics</td>
+            <td>0734567890</td>
+            <td><span class="badge bg-secondary">On Leave</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Fee Management -->
+    <div class="table-section">
+      <h4><i class="fa-solid fa-money-bill-wave"></i> Fee Management</h4>
+
+      <table class="table table-striped mt-3">
+        <thead class="table-danger">
+          <tr>
+            <th>Student</th>
+            <th>Class</th>
+            <th>Total Fees</th>
+            <th>Paid</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>John Mwangi</td>
+            <td>Form 3</td>
+            <td>Ksh 60,000</td>
+            <td>Ksh 50,000</td>
+            <td><span class="text-danger">Ksh 10,000</span></td>
+          </tr>
+
+          <tr>
+            <td>Aisha Ali</td>
+            <td>Form 2</td>
+            <td>Ksh 60,000</td>
+            <td>Ksh 60,000</td>
+            <td><span class="text-success">Cleared</span></td>
+          </tr>
+
+          <tr>
+            <td>Brian Otieno</td>
+            <td>Form 4</td>
+            <td>Ksh 60,000</td>
+            <td>Ksh 35,000</td>
+            <td><span class="text-danger">Ksh 25,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>© 2026 St lukes  Secondary School Management System</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
